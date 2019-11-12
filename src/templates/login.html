@@ -37,23 +37,23 @@ input[type=button], input[type=submit], input[type=reset] {
 <body bgcolor = "#5E5757" text = "#000000">
   <div class = "solid"align = "center">
   <font face = "Courier">
+    <!--Script for sending info-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    function gotoDemo(){
+      $.ajax({
+        url: 'http://localhost:8080/csgologin',
+    });
+    }
+    </script>
+
     <h1><b>LOGIN</b></h1>
   <h2> Enter SteamID: </h2>
     <form method="post" action="http://localhost:8080/csgologin">
       <input type="text" name="steamid" value="" id="steamid">
-      <input type="submit" value="Submit" onclick="sendInfo()">
+      <input type="submit" value="Submit" onclick="gotoDemo()">
     </form>
     <br>
     </div>
 </font>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-function sendInfo(){
-  $.ajax({
-    url: 'http://localhost:8080/csgologin',
-    data: {steamid : $("input[name='steamid']").val() }
-});
-}
-//Send steamid to nodejs
-</script>
 </body>
 </html>

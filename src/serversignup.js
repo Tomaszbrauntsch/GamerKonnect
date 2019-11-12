@@ -34,7 +34,7 @@ app.post('/csgosignup', (req, res) => {
   });
   userinfo = siteInfo
   let data = JSON.stringify(userinfo);
-  data = `data = '${data}'`
+  data = `data = '${data}';`
   fs.writeFileSync(`csgojson/${steamid}.json`, data);
   console.log(userinfo);
   }

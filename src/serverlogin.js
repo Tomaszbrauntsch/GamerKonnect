@@ -8,15 +8,22 @@ const axios = require("axios");
 const cheerio = require('cheerio');
 //json file saving
 const fs = require('fs');
-
+const http = require('http');
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.static('csgojson'));
+
+var steamid;
 app.post('/csgologin', (req, res) => {
-  var steamid = req.body.steamid;
+  steamid = req.body.steamid;
   console.log(`${steamid}`);
+  //Gets path for html file and opens it up
+  path = __dirname + '/csgojson/'
+  res.sendFile(__dirname + '/templates/demo.html')
 });
+
 //Below is used for running not for work
 const port = 8080;
 app.listen(port, () => {
