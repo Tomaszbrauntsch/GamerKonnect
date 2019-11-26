@@ -9,39 +9,39 @@
         background-color: #5E5757;
         background-size: 100%;
       }
+      #JSONinsert{
+
+      }
     </style>
   </head>
   <body>
-
     <h1 id="steamid"></h1>
     <h1 id="username"></h1>
     <img id="image">
     <h1 id="rank"></h1>
+    <script id="JSONinsert" type="text/javascript"></script>
     <script>
-       var steamidCookie = document.cookie;
+    var mydata = JSON.parse(data);
+    document.getElementById("username").textContent = mydata[0].username;
+    document.getElementById("image").src = mydata[0].image;
+    document.getElementById("rank").textContent = mydata[0].rank;
+  </script>
+    <script>
+     var steamidCookie = document.cookie;
 
        // Get all the cookies pairs in an array
        parseCookie = steamidCookie.split(';');
        // Now take key value pair out of this array
        rawsteamid = parseCookie[0].split('=')[1];
        var steamid_json = rawsteamid + ".json";
-       document.getElementById("SIDJSON").src = steamid_json;
-    </script>
+         document.getElementById('JSONinsert').setAttribute("src", steamid_json)
+           alert(document.getElementById("JSONinsert").getAttribute("src"));
+     </script>
     <!--
     TODO
-    The cookie that was posted from the server and is being obtained
-    from the cilent try to use that cookie and rename the src of the script
-    tag to make it automatic
-    TEST: TRY TO MAKE A DIFFERENT FOLDER TO TEST AND TRY TO REPLACE THE
-    SCRIPT FILE THAT IS WITHIN A COOKIE!!!
+    Reload the script tag with id="JSONinsert" so it can reload and pull up the src
+    that it is currently assigned to
   -->
-    <script id="SIDJSON" type="text/javascript"></script>
-    <script>
-    var mydata = JSON.parse(data);
-    alert(mydata);
-    document.getElementById("username").textContent = mydata[0].username;
-    document.getElementById("image").src = mydata[0].image;
-    document.getElementById("rank").textContent = mydata[0].rank;
-  </script>
+    <!--<script id="SIDJSON" type="text/javascript"></script>-->
   </body>
 </html>
