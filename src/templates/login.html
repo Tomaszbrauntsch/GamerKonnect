@@ -17,7 +17,7 @@ input[type=text] {
   background-color: #FFFFFF;
   background-color: white;
 }
-input[type=button], input[type=submit], input[type=reset] {
+input[type=button], input[type=submit], input[type=reset]{
   background-color: #5E5757;
   border: 3px solid #1C9971;
   border-radius: 8px;
@@ -37,23 +37,16 @@ input[type=button], input[type=submit], input[type=reset] {
 <body bgcolor = "#5E5757" text = "#000000">
   <div class = "solid"align = "center">
   <font face = "Courier">
-    <!--Script for sending info of what steamid was used to the server-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-    function gotoDemo(){
-      $.ajax({
-        url: 'http://localhost:8080/csgologin',
-    });
-    }
-    </script>
-
     <h1><b>LOGIN</b></h1>
   <h2> Enter SteamID: </h2>
     <form method="post" action="http://localhost:8080/csgologin">
       <input type="text" name="steamid" value="" id="steamid">
       <input type="submit" value="Submit" onclick="gotoDemo()">
     </form>
+    <a>
     <br>
     </div>
 </font>
+<a id="homeButton" href="index.html">Back to Home Screen</a>
 </body>
 </html>

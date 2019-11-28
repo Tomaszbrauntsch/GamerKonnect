@@ -2,17 +2,7 @@
   <head>
     <title>
     </title>
-    <style>
-      body {
-        /*background-image: url("https://s2.gaming-cdn.com/images/products/406/screenshot/tom-clancys-rainbow-six-siege-wallpaper-4.jpg");
-        */background-repeat: no-repeat;
-        background-color: #5E5757;
-        background-size: 100%;
-      }
-      #JSONinsert{
-
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="demo.css">
   </head>
   <body>
     <h1 id="steamid"></h1>
@@ -20,28 +10,35 @@
     <img id="image">
     <h1 id="rank"></h1>
     <script id="JSONinsert" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-    var mydata = JSON.parse(data);
-    document.getElementById("username").textContent = mydata[0].username;
-    document.getElementById("image").src = mydata[0].image;
-    document.getElementById("rank").textContent = mydata[0].rank;
-  </script>
-    <script>
-     var steamidCookie = document.cookie;
-
-       // Get all the cookies pairs in an array
-       parseCookie = steamidCookie.split(';');
-       // Now take key value pair out of this array
-       rawsteamid = parseCookie[0].split('=')[1];
-       var steamid_json = rawsteamid + ".json";
-         document.getElementById('JSONinsert').setAttribute("src", steamid_json)
-           alert(document.getElementById("JSONinsert").getAttribute("src"));
-     </script>
+    $(window).on('load', function(){
+      function loadSrc(){
+        var steamidCookie = document.cookie;
+           // Get all the cookies pairs in an array
+           parseCookie = steamidCookie.split(';');
+           // Now take key value pair out of this array
+           rawsteamid = parseCookie[0].split('=')[1];
+           var steamid_json = rawsteamid + ".json";
+           document.getElementById('JSONinsert').setAttribute("src", steamid_json);
+           setTimeout(2000);
+           var path = window.location.origin;
+           $('#userInfo').load(path);
+         }
+         function userInfo(){
+           var mydata = JSON.parse(data);
+           document.getElementById("username").textContent = mydata[0].username;
+           document.getElementById("image").src = mydata[0].image;
+           document.getElementById("rank").textContent = mydata[0].rank;
+         }
+      loadSrc();
+      window.setTimeout(userInfo, 15);
+         });
+       </script>
     <!--
     TODO
-    Reload the script tag with id="JSONinsert" so it can reload and pull up the src
-    that it is currently assigned to
+    Build the front-end
+    Use a table for formatting
   -->
-    <!--<script id="SIDJSON" type="text/javascript"></script>-->
   </body>
 </html>
