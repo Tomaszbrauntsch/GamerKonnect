@@ -5,10 +5,26 @@
     <link rel="stylesheet" type="text/css" href="demo.css">
   </head>
   <body>
-    <h1 id="steamid"></h1>
-    <h1 id="username"></h1>
-    <img id="image">
-    <h1 id="rank"></h1>
+    <div id="infoOrg">
+    <div id="border">
+    <div id="topText">
+      <img id="image">
+        <p class="displayText">Username</p>
+        <p id="username"></p>
+        <br>
+        <p class="displayText">Rank</p>
+      <p id="rank"></p>
+      <hr style="width:94%;background-color: black;">
+      <p class="displayText">About Me</p>
+    </div>
+      <p id="aboutMeText">Im looking for an entry fragger that can xyz then continuery fragger that can xyz then continueIm looking for an entry fragger that can xyz then continuery fragger that can xyz then continueIm looking for an entry fragger that can xyz then continuery fragger that can xyz then continue</p>
+      <div id="footer">
+        <a href="index.html"><img id="footerimg" src="checkmark.png"></a>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Updates element with information from dynamic json-->
     <script id="JSONinsert" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>

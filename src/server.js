@@ -15,6 +15,8 @@ const app = express();
 app.use(express.static('csgojson'));
 app.use(express.static('scripts'));
 app.use(express.static('static'));
+app.use(express.static('images'));
+app.use(express.static('templates'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -23,6 +25,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //
 //SIGNUP FOR CSGO
 //
+/*
+TODO:
+Work on building a cookie that tells you the status of the loading, of how the
+backend is going. If it is process, good or failed
+*/
+
 
 app.post('/csgosignup', (req, res) => {
   var steamid = req.body.steamid;
@@ -49,6 +57,7 @@ app.post('/csgosignup', (req, res) => {
   fs.writeFileSync(`csgojson/${steamid}.json`, data);
   console.log(userinfo);
   }
+
   getData(response.data);
   })
 
@@ -71,10 +80,6 @@ app.post('/csgologin', (req, res) => {
   res.sendFile(__dirname + '/templates/demo.html');
 });
 
-app.get('/userData', (req, res)=>{
-  res.send(req.cookies);
-  console.log(req.cookies);
-});
 
 const port = 8080;
 app.listen(port, () => {

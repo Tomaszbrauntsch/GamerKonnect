@@ -35,17 +35,31 @@ input[type=button], input[type=submit], input[type=reset] {
 </style>
 </head>
 <body bgcolor = "#5E5757" text = "#000000">
-  <div class = "solid"align = "center">
+  <div class = "solid" align = "center">
   <font face = "Courier">
     <h1><b>SIGNUP</b></h1>
   <h2> Enter SteamID: </h2>
     <form method="post" action="http://localhost:8080/csgosignup">
       <input type="text" name="steamid" value="" id="steamid">
-      <input type="submit" value="Submit" onclick="sendInfo()">
+      <input type="submit" value="Submit" onsubmit="obtainCookie()">
     </form>
     <br>
     </div>
 </font>
+<script>
+function obtainCookie(){
+  var statusCookie = document.cookie;
+  var loadingStatus = "";
+  while (loadingStatus != ""){
+     // Get all the cookies pairs in an array
+     parseCookie = statusCookie.split(';');
+     // Now take key value pair out of this array
+     status = parseCookie[0].split('=')[1];
+     loadingStatus = status;
+   }
+   alert("good!");
+ }
+</script>
 <a href="index.html">Back to Home Screen</a>
 </body>
 </html>
