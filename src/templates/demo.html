@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="demo.css">
   </head>
   <body>
+    <img id="imagebackground">
     <div id="infoOrg">
     <div id="border">
     <div id="topText">
@@ -17,24 +18,23 @@
       <hr style="width:94%;background-color: black;">
       <p class="displayText">About Me</p>
     </div>
-      <p id="aboutMeText">Im looking for an entry fragger that can xyz then continuery fragger that can xyz then continueIm looking for an entry fragger that can xyz then continuery fragger that can xyz then continueIm looking for an entry fragger that can xyz then continuery fragger that can xyz then continue</p>
+      <p id="aboutMeText"></p>
       <div id="footer">
         <a href="index.html"><img id="footerimg" src="checkmark.png"></a>
       </div>
     </div>
   </div>
-</div>
     <!-- Updates element with information from dynamic json-->
     <script id="JSONinsert" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
     $(window).on('load', function(){
       function loadSrc(){
-        var steamidCookie = document.cookie;
+        var rawCookie = document.cookie;
            // Get all the cookies pairs in an array
-           parseCookie = steamidCookie.split(';');
+           parsedCookie = rawCookie.split(';');
            // Now take key value pair out of this array
-           rawsteamid = parseCookie[0].split('=')[1];
+           rawsteamid = parsedCookie[0].split('=')[1];
            var steamid_json = rawsteamid + ".json";
            document.getElementById('JSONinsert').setAttribute("src", steamid_json);
            setTimeout(2000);
@@ -45,7 +45,9 @@
            var mydata = JSON.parse(data);
            document.getElementById("username").textContent = mydata[0].username;
            document.getElementById("image").src = mydata[0].image;
+           document.getElementById("imagebackground").src = mydata[0].image;
            document.getElementById("rank").textContent = mydata[0].rank;
+           document.getElementById("aboutMeText").textContent = mydata[0].aboutMe;
          }
       loadSrc();
       window.setTimeout(userInfo, 15);

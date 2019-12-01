@@ -5,61 +5,25 @@ info-->
 <head>
 <title>
 </title>
-<style>
-div.solid {
-  border-style: solid;
-  border-color: #3d3939;
-  background-color: #7a7373;
-}
-input[type=text] {
-  border: 2px solid #1C9971;
-  border-radius: 4px;
-  background-color: #FFFFFF;
-  background-color: white;
-}
-input[type=button], input[type=submit], input[type=reset] {
-  background-color: #5E5757;
-  border: 3px solid #1C9971;
-  border-radius: 8px;
-  color: #000000;
-  padding: 5px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
-  font-family: Courier New;
-  font-family: Courier New;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="signup.css">
+<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body bgcolor = "#5E5757" text = "#000000">
-  <div class = "solid" align = "center">
-  <font face = "Courier">
-    <h1><b>SIGNUP</b></h1>
-  <h2> Enter SteamID: </h2>
-    <form method="post" action="http://localhost:8080/csgosignup">
-      <input type="text" name="steamid" value="" id="steamid">
-      <input type="submit" value="Submit" onsubmit="obtainCookie()">
+  <div align = "center">
+    <h1 id="titleText">
+      SIGNUP
+    </h1>
+    <form method="post" id="usrinfo" action="http://localhost:8080/csgosignup">
+      <div class="informationMove"></div>
+      <input type="text" name="steamid" placeholder="Enter Steamid..." id="steamid">
+      <div class="informationMove"></div>
+      <textarea name="aboutMe" rows="14" cols="10" placeholder="Enter About Me Information..." maxlength="250"></textarea>
+      <div class="informationMove"></div>
+      <input name="submitButton" type="submit" value="Submit">
     </form>
     <br>
+    <div class="informationMove"></div>
+    <a id="btHome" href="index.html">Back to Home Screen</a>
     </div>
-</font>
-<script>
-function obtainCookie(){
-  var statusCookie = document.cookie;
-  var loadingStatus = "";
-  while (loadingStatus != ""){
-     // Get all the cookies pairs in an array
-     parseCookie = statusCookie.split(';');
-     // Now take key value pair out of this array
-     status = parseCookie[0].split('=')[1];
-     loadingStatus = status;
-   }
-   alert("good!");
- }
-</script>
-<a href="index.html">Back to Home Screen</a>
 </body>
 </html>
