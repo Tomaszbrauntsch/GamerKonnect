@@ -3,100 +3,49 @@
 	<head>
 		<title>
 		</title>
-		<link rel = "icon" href = "">
-		<style>
-		iframe {
-				border: 4px solid #1C9971;
-			}
-		.button a {
-			background-color: #5E5757;
-			border: 4px solid #1C9971;
-			border-radius: 8px;
-			color: #000000;
-			padding: 12px 35px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 20px;
-			font-family: Courier New;
-			font-family: Courier New;
- 			-webkit-transition-duration: 0.3s;
-			transition-duration: 0.3s;
-		}
-		.button a:hover {
-			background-color: #14664c;
-			color: white;
-		}
-		div.solid {
-			border-style: solid;
-			border-color: #3d3939;
-			background-color: #7a7373;
-		}
-		</style>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<script src="index.js">
+		</script>
 </head>
 
 <!-- The Menu for The Website -->
 
-<body bgcolor = "#5E5757" text = "#000000">
-	<div class = "solid" align = "center">
-	<h1>
-		<font face = "Courier" size = "7">
-			GamerKonnect
-		</font>
-	</h1>
-	<br>
-		<font face = "Courier" size = "5">
-		<b> Welcome to GamerKonnect!
-		Here, you are able to connect with other players in your desired video game.
-		You are able to get information pertaning to the person's rank, steam profile, or other forms of communication.
-		Cosnstant updates will be created to make a better and more accurate experience for those who are hoping to find people.
-		Other games are going to be added soon: for now, the only games available are CS:GO, Rainbow Six: Siege, and Rocket Leauge.
-		Hope you have a pleasant experience and meet with new friends. </b>
-<br>
-<br>
-	<div align = "center">
-		<table height = "150" width = "500">
-			<tr height = "50%">
-				<td>
-					<div class = "button" align = "center">
-						<a href = "signup.html" title = "Sign Up">
-							<b> Sign up </b>
-						</a>
-					</div>
-				</td>
-			</tr>
-			<tr height = "50%">
-				<td>
-					<div class = "button" align = "center">
-						<a href = "login.html" title = "Sign In">
-							<b> Login</b>
-						</a>
-					</div>
-				</td>
-			</tr>
-		</table>
-	<br>
+<body>
+	<div class="parallax">
+	</div>
+		<div class="containertitle">
+	<span class="containertitleText">
+		GamerKonnect
+	</span>
+</div>
+<div class="containerabout">
+	<h2><b>
+		<div style="text-align:center;">Welcome to GamerKonnect!<br><br></div>
+	Here, you are able to connect with other players in your desired video game.
+	You are able to get information pertaning to the person's rank, steam profile, or other forms of communication.
+	Cosnstant updates will be created to make a better and more accurate experience for those who are hoping to find people.
+	Other games are going to be added soon: for now, the only games available are CS:GO, Rainbow Six: Siege, and Rocket Leauge.
+	Hope you have a pleasant experience and meet with new friends. </b>
+</h2>
+</div>
+<!-- TODO: Build a form to register from the index not from a seperate page -->
+<div style="margin-left:5%;margin-right:5%;">
+<div class="containerlogsign">
+		<h1 id="registerTitle">Registration</h1>
+		<form>
+			<input id="email" type="text" onclick=""required><br>
+			<label for="email">Enter an email</label>
+			<input id="password" type="text" required><br>
+			<label for="password">Enter a password</label>
+			<div style="padding-top:5em;"></div>
+			<input type="submit" value="Register">
+		</form>
 </div>
 </div>
-<table height = "1000" width = "1335">
-	<tr height = "50%">
-		<td width = "50%">
-			<div align = "center">
-			<iframe width = "560" height = "315" src = "https://www.youtube.com/embed/bChP6GsxbiI" frameborder = "0" allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-		<td width = "50%">
-			<div align = "center">
-			<iframe width = "560" height="315" src="https://www.youtube.com/embed/AC8mwSgb51M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-	</tr>
-	<tr height = "50%">
-		<td width = "50%">
-			<div align = "center">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/rKZT8iREmzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-		<td width = "50%">
-			<div align = "center">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/lycpeJ7Pcp8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-	</tr>
+<div align="center">
+	<a id="loginButton" align="center" href = "login.html" title = "Login to GamerKonnect">
+		<b>Already a Member?</b>
+	</div>
+	</a>
 </html>

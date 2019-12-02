@@ -53,7 +53,9 @@ app.post('/csgosignup', (req, res) => {
           username : $('div.upper div.row div.col-xs-8 div.title-card h1.steam-name').text(),
           image : $('div.upper div.row div.col-xs-8 div.avatar img.img-avatar').attr('src'),
           rank : $('div.lower div.row div.col-xs-4 span.rank-name').text(),
-          aboutMe : aboutMe
+          aboutMe : aboutMe,
+          accepted: null,
+          rejected: null
     });
   });
   userinfo = siteInfo;
