@@ -19,7 +19,8 @@
 		GamerKonnect
 	</span>
 </div>
-<div style="background: linear-gradient(135deg, #f09999, #d48787, #4fcdff, #00b7ff );">
+<!--<div style="background: linear-gradient(#f09999, #d48787, #4fcdff, #00b7ff, #5c7396, #252E3C );">
+-->
 <div class="containerabout">
 	<h2 id="aboutText"><b>
 		<div style="text-align:center;">Welcome to GamerKonnect!<br><br></div>
@@ -29,18 +30,17 @@
 	Hope you have a pleasant experience and meet with new friends. </b>
 </h2>
 </div>
-<hr style="width:90%;color:white;">
 <!-- TODO: Build a form to register from the index not from a seperate page
 #0070ff -->
-<div style="box-sizing: border-box; padding:5%;">
+<div id="backgroundcontainerlogsign">
 <div class="containerlogsign">
 		<h1 id="registerTitle">Registration</h1>
-		<form>
-			<input id="email" type="text" onclick=""required><br>
+		<form method="post" action="http://localhost:8080/registration">
+			<input name="email" type="text" required><br>
 			<label for="email">Enter an email</label>
-			<input id="password" type="text" required><br>
+			<input name="password" type="text" required><br>
 			<label for="password">Enter a password</label>
-			<div style="padding-top:5em;"></div>
+			<div style="padding-top:4em;"></div>
 			<!-- TODO: Add when on form submit, submit the form but then redirect
 		website to somewhere else, also build a profile from there maybe use demo.html as a login
 		/ how profile looks -->
@@ -48,10 +48,10 @@
 		</form>
 </div>
 </div>
-</div>
-<div align="center">
+<div align="center" style="padding-top:4em;padding-bottom:5em;">
 	<a id="loginButton" align="center" href = "login.html" title = "Login to GamerKonnect">
 		<b>Already a Member?</b>
+			</a>
 	</div>
-	</a>
+</div>
 </html>

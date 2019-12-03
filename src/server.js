@@ -31,9 +31,19 @@ TODO:
 Work on building a cookie that tells you the status of the loading, of how the
 backend is going. If it is process, good or failed
 */
+var email = '';
+var password = '';
+app.post('/registration', (req, res) => {
+  email = req.body.email;
+  password = req.body.password;
+  console.log("email: " + `${email}` + "  password: " + `${password}`);
+  res.sendFile(__dirname + '/templates/signup.html');
+});
+
+
 var status = '';
 var aboutMe;
-app.post('/csgosignup', (req, res) => {
+app.post('/sid', (req, res) => {
   //building aboutMe Cookie
   var steamid = req.body.steamid;
   var aboutMe = req.body.aboutMe;
@@ -49,6 +59,8 @@ app.post('/csgosignup', (req, res) => {
       const $ = cheerio.load(html);
       $('div.player-profile-banner div.banner').each((i, elem) => {
         siteInfo.push({
+          email : email,
+          password : password,
           steamid : steamid,
           username : $('div.upper div.row div.col-xs-8 div.title-card h1.steam-name').text(),
           image : $('div.upper div.row div.col-xs-8 div.avatar img.img-avatar').attr('src'),
@@ -83,13 +95,24 @@ app.get('/processingstatus', function(req, res){
 //
 
 app.post('/csgologin', (req, res) => {
-  steamid = req.body.steamid;
-  console.log(`${steamid}`);
-  res.cookie("steamid", steamid);
-  //res.cookie("aboutMe", aboutMe);
-  //Gets path for html file and opens it up
-  path = __dirname + '/csgojson/'
-  res.sendFile(__dirname + '/templates/demo.html');
+  fs.readdirSync('csgojson').forEach(file =>{
+    email = req.body.email;
+    password = req.body.password;
+    const fileContents = fs.readFileSync(__dirname + '/csgojson/' + file, 'utf8')
+    var parsedata = fileContents.substr(8);
+    parsedata = parsedata.replace(/}]\';/, '}]');
+    data = JSON.parse(parsedata);
+    console.log("useremail:" + email + "  databaseEmail:" + data[0].email);
+    console.log("userpassword:" + password + "  databasePassword:" + data[0].password);
+    if (email == data[0].email && password == data[0].password){
+      res.cookie("steamid", data[0].steamid);
+      res.cookie("aboutMe", data[0].aboutMe);
+      res.sendFile(__dirname + '/templates/demo.html');
+    }
+  });
+  if(email != data[0].email && password != data[0].password){
+    res.send("You have entered the wrong email and/or password, please try again!");
+  }
 });
 
 
