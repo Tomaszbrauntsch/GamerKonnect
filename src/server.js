@@ -80,6 +80,7 @@ app.post('/sid', (req, res) => {
   fs.writeFileSync(`csgojson/${steamid}.json`, data);
   status = 'success';
   console.log(userinfo);
+  res.redirect('/');
   }
 
   getData(response.data);
