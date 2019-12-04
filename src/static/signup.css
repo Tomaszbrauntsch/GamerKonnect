@@ -1,0 +1,89 @@
+html,body{
+  margin:0%;
+}
+#titleText{
+  font-family: 'Lato', sans-serif;
+  color:white;
+  font-size:3em;
+  text-align:center;
+}
+.informationMove{
+  padding-top:7%;
+}
+input[name=steamid] {
+  width: 26%;
+  box-sizing: border-box;
+  border: 2px solid #00FF00;
+  border-radius: 0.3em;
+  font-size: 2em;
+  background-color:rgba(0,0,0,0.6);
+  color:#FFFFFF;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+textarea[name=aboutMe] {
+  width: 45%;
+  height: 1.5em;
+  box-sizing: border-box;
+  border: 2px solid #00FF00;
+  border-radius: 0.3em;
+  font-size: 1.8em;
+  background-color:rgba(0,0,0,0.6);
+  color:#FFFFFF;
+  font-family: 'Lato', sans-serif;
+  text-align:center;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
+  word-wrap:break-word;
+}
+
+
+input[name=steamid]:focus{
+  width:45%;
+}
+input[name=steamid]:hover{
+  width:45%;
+}
+textarea[name=aboutMe]:focus{
+  width:45%;
+  height:13em;
+}
+textarea[name=aboutMe]:hover{
+  width:45%;
+  height:13em;
+}
+
+input[type=submit] {
+  width:30%;
+  height:40%;
+  background-color:rgba(0,0,0,0.6);
+  border: 3px solid #0F0;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-family: 'Lato', sans-serif;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+a#btHome{
+  font-size:1.8em;
+  color:white;
+  border-radius:8px;
+  background-color:rgba(0,0,0,0.6);
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  border: 3px #0F0 solid;
+}

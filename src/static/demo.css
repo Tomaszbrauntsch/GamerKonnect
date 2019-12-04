@@ -1,0 +1,67 @@
+html,body{
+  margin:0%;
+}
+body {
+  background-repeat: no-repeat;
+  background-color: #5E5757;
+  background-size: 100%;
+}
+#border{
+  background-color: #2f7275;
+margin-left:5%;
+margin-right:5%;
+border: 5px black solid;
+height:95%;
+}
+#infoOrg{
+  background-color: white;
+  width:50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  height:100%;
+}
+#topText{
+  line-height: 0px;
+}
+#username{
+  font-size: 2.1em;
+  padding-left: 5%;
+}
+#image{
+  position:relatve;
+  width:50%;
+  margin-left: 25%;
+  margin-right:25%;
+
+  border: 2px gray solid;
+  border-radius: 15%;
+}
+#rank{
+color:red;
+font-size: 2.1em;
+padding-left:5%;
+}
+.displayText{
+  font-size:3em;
+  padding-left:5%;
+}
+#aboutMeText{
+  word-wrap: break-word;
+  width:100%;
+  margin-left:4%;
+  margin-right:5%;
+  font-size:1em;
+}
+
+#footerimg{
+  height:10%;
+  width:10%;
+  margin-left:45%;
+  margin-right:45%;
+}
+#imagebackground{
+  position:absolute;
+  width:100%;
+  z-index: -1;
+  filter: grayscale(50%) blur(1em);
+}

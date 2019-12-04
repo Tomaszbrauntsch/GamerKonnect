@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<script src="index.js">
+		</script>
+</head>
+
+<!-- The Menu for The Website -->
+
+<body>
+	<div class="parallax">
+	</div>
+		<div class="containertitle">
+	<span class="containertitleText">
+		GamerKonnect
+	</span>
+</div>
+<!--<div style="background: linear-gradient(#f09999, #d48787, #4fcdff, #00b7ff, #5c7396, #252E3C );">
+-->
+<div class="containerabout">
+	<h2 id="aboutText"><b>
+		<div style="text-align:center;">Welcome to GamerKonnect!<br><br></div>
+		Here, you are able to connect with other players in your desired video game.
+	You are able to get information pertaning to the person's rank, steam profile, or other forms of communication. Constant updates will be created to make a better and more accurate experience for those who are hoping to find people.
+	Other games are going to be added soon: for now, the only games available are CS:GO, Rainbow Six: Siege, and Rocket Leauge.
+	Hope you have a pleasant experience and meet with new friends. </b>
+</h2>
+</div>
+<!-- TODO: Build a form to register from the index not from a seperate page
+#0070ff -->
+<div id="backgroundcontainerlogsign">
+<div class="containerlogsign">
+	<hr style="color:white;">
+		<h1 id="registerTitle">Registration</h1>
+		<form method="post" action="http://localhost:8080/registration">
+			<input name="email" type="text" required><br>
+			<label for="email">Enter an email</label>
+			<input name="password" type="password" required><br>
+			<label for="password">Enter a password</label>
+			<div style="padding-top:4em;"></div>
+			<!-- TODO: Add when on form submit, submit the form but then redirect
+		website to somewhere else, also build a profile from there maybe use demo.html as a login
+		/ how profile looks -->
+			<input type="submit" value="Register">
+		</form>
+</div>
+</div>
+<div align="center" style="padding-top:4em;padding-bottom:5em;">
+	<a id="loginButton" align="center" href = "login.html" title = "Login to GamerKonnect">
+		<b>Already a Member?</b>
+			</a>
+	</div>
+</html>
