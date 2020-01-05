@@ -87,7 +87,7 @@
     text-align:left;
     color:white;
   }
-  input[type=text]{
+  input[type=text], input[type=password]{
     font-size: 1em;
     background-color: rgba(0,0,0,0.0);
     border:none;
@@ -117,6 +117,12 @@
     border:none;
     font-size: 1.5em;
   }
+
+  input[type=password]:focus{
+    border:none;
+    font-size: 1.5em;
+  }
+
   input[type="submit"]:hover{
     background-color: #2d2db5;
     color:white;
@@ -225,7 +231,7 @@
     text-align:left;
     color:white;
   }
-  input[type=text]{
+  input[type=text], input[type=password]{
     font-size: 1em;
     background-color: rgba(0,0,0,0.0);
     border:none;
@@ -255,6 +261,12 @@
     border:none;
     font-size: 1.5em;
   }
+
+  input[type=password]:focus{
+    border:none;
+    font-size: 1.5em;
+  }
+
   input[type="submit"]:hover{
     background-color: #2d2db5;
     color:white;
@@ -363,7 +375,7 @@
     text-align:left;
     color:white;
   }
-  input[type=text]{
+  input[type=text], input[type=password]{
     font-size: 1em;
     background-color: rgba(0,0,0,0.0);
     border:none;
@@ -393,6 +405,12 @@
     border:none;
     font-size: 1.5em;
   }
+
+  input[type=password]:focus{
+    border:none;
+    font-size: 1.5em;
+  }
+
   input[type="submit"]:hover{
     background-color: #2d2db5;
     color:white;
@@ -506,7 +524,7 @@ Phones width
     text-align:left;
     color:white;
   }
-  input[type=text]{
+  input[type=text], input[type=password]{
     font-size: 1em;
     background-color: rgba(0,0,0,0.0);
     border:none;
@@ -536,6 +554,12 @@ Phones width
     border:none;
     font-size: 1.5em;
   }
+
+  input[type=password]:focus{
+    border:none;
+    font-size: 1.5em;
+  }
+
   input[type="submit"]:hover{
     background-color: #2d2db5;
     color:white;
@@ -594,7 +618,7 @@ Phones width
 }
 
 .containerabout{
-  font-size:0.85em;
+  font-size:0.9em;
   height:75%;
   color: #000;
   text-align:center;
@@ -644,7 +668,7 @@ form label{
   padding-bottom:1em;
   text-align:left;
 }
-input[type=text]{
+input[type=text], input[type=password]{
   font-size: 1em;
   color:white;
   background-color: rgba(0,0,0,0.0);
@@ -675,6 +699,12 @@ input[type=text]:focus{
   border:none;
   font-size: 1.5em;
 }
+
+input[type=password]:focus{
+  border:none;
+  font-size: 1.5em;
+}
+
 input[type="submit"]:hover{
   background-color: #2d2db5;
   color:white;
@@ -782,7 +812,7 @@ form label{
   padding-bottom:1em;
   text-align:left;
 }
-input[type=text]{
+input[type=text], input[type=password]{
   font-size: 2em;
   color:white;
   background-color: rgba(0,0,0,0.0);
@@ -810,6 +840,154 @@ input[type="submit"]{
   transition: all 1.5s ease-in-out;
 }
 input[type=text]:focus{
+  border:none;
+  font-size: 1.5em;
+}
+
+input[type=password]:focus{
+  border:none;
+  font-size: 1.5em;
+}
+
+input[type="submit"]:hover{
+  background-color: #2d2db5;
+  color:white;
+}
+#loginButton{
+  line-height: 3em;
+  text-decoration: none;
+  font-size:1.3em;
+  font-family: 'Lato', sans-serif;
+  color:#FFF;
+  padding:0.2em;
+  -webkit-transition: color 1.2s ease-in-out;
+  transition: color 1.2s ease-in-out;
+}
+#loginButton:hover{
+  color:pink;
+}
+}
+
+@media only screen and (max-width: 550px){
+html, body{
+height:100%;
+margin: 0;
+background-color:#252E3C;
+}
+
+.parallax{
+  background-image: url('background.gif');
+  min-height:100%;
+  width:100%;
+  filter: blur(1em);
+  position:relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: saturation;
+}
+
+.containertitle{
+  position: absolute;
+  left: 0;
+  top: 45%;
+  width: 100%;
+  text-align:center;
+}
+.containertitle span.containertitleText{
+  font-size:2.2em;
+  font-family: 'Lato', sans-serif;
+  /* color: #636278;
+  color: #8c8aab; */
+  color:#a8a5cf;
+  padding:1.2em;
+  letter-spacing: 0.1em;
+}
+
+.containerabout{
+  font-size:0.75em;
+  height:75%;
+  color: #000;
+  text-align:center;
+  text-align: justify;
+  line-height: 1.5em;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 40px;
+  padding-bottom:40px;
+  background:linear-gradient(#f09999, #4fcdff);
+  margin:0px;
+}
+#aboutText{
+  font-family: 'Lato', sans-serif;
+  color:#e1e8eb;
+  background-color: rgba(0,0,0,0);
+  text-align:center;
+
+}
+#backgroundcontainerlogsign{
+  margin-top:-6%;
+  box-sizing: border-box;
+  background: linear-gradient(#4fcdff, #252E3C);
+}
+.containerlogsign{
+  box-sizing: border-box;
+  margin-left: 5%;
+  width:90%;
+  height:20%;
+  text-align:center;
+  font-family: 'Lato', sans-serif;
+}
+.containerlogsign h1#registerTitle{
+  font-size:2em;
+  color:white;
+  text-align:left;
+  padding:10px;
+}
+.containerlogsign form{
+}
+form label{
+  line-height: 0.2em;
+  font-size:1.5em;
+  color:white;
+  display:block;
+  padding-top:0.4em;
+  padding-bottom:1em;
+  text-align:left;
+}
+input[type=text], input[type=password]{
+  font-size: 2em;
+  color:white;
+  background-color: rgba(0,0,0,0.0);
+  border:none;
+  border-bottom: 0.2em white solid;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  width:80%;
+  padding:1em 1em;
+  margin: 0.5em 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+input[type="submit"]{
+  text-align:center;
+  background-color:rgba(0,0,0,0);
+  color:white;
+  font-size:2em;
+  padding: 0.3em 3em 0.3em 3em;
+  border-bottom:none;
+  border-radius: 3em;
+  border-style:none;
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
+}
+input[type=text]:focus{
+  border:none;
+  font-size: 1.5em;
+}
+input[type=password]:focus{
   border:none;
   font-size: 1.5em;
 }
@@ -920,7 +1098,7 @@ form label{
   padding-bottom:1em;
   text-align:left;
 }
-input[type=text]{
+input[type=text], input[type=password]{
   font-size: 2em;
   color:white;
   background-color: rgba(0,0,0,0.0);
@@ -948,6 +1126,10 @@ input[type="submit"]{
   transition: all 1.5s ease-in-out;
 }
 input[type=text]:focus{
+  border:none;
+  font-size: 1.5em;
+}
+input[type=password]:focus{
   border:none;
   font-size: 1.5em;
 }
@@ -1059,7 +1241,7 @@ form label{
   padding-bottom:1em;
   text-align:left;
 }
-input[type=text]{
+input[type=text], input[type=password]{
   font-size: 2em;
   color:white;
   background-color: rgba(0,0,0,0.0);
@@ -1087,6 +1269,10 @@ input[type="submit"]{
   transition: all 1.5s ease-in-out;
 }
 input[type=text]:focus{
+  border:none;
+  font-size: 1.5em;
+}
+input[type=password]:focus{
   border:none;
   font-size: 1.5em;
 }
@@ -1168,7 +1354,6 @@ background-color:#252E3C;
 
 }
 #backgroundcontainerlogsign{
-  margin-top:-6%;
   box-sizing: border-box;
   background: linear-gradient(#4fcdff, #252E3C);
 }
@@ -1197,7 +1382,7 @@ form label{
   padding-bottom:1em;
   text-align:left;
 }
-input[type=text]{
+input[type=text], input[type=password]{
   font-size: 1em;
   color:white;
   background-color: rgba(0,0,0,0.0);
@@ -1225,6 +1410,10 @@ input[type="submit"]{
   transition: all 1.5s ease-in-out;
 }
 input[type=text]:focus{
+  border:none;
+  font-size: 1.5em;
+}
+input[type=password]:focus{
   border:none;
   font-size: 1.5em;
 }
@@ -1334,7 +1523,7 @@ form label{
   padding-bottom:1em;
   text-align:left;
 }
-input[type=text]{
+input[type=text], input[type=password]{
   font-size: 1em;
   color:white;
   background-color: rgba(0,0,0,0.0);
@@ -1362,6 +1551,10 @@ input[type="submit"]{
   transition: all 1.5s ease-in-out;
 }
 input[type=text]:focus{
+  border:none;
+  font-size: 1.5em;
+}
+input[type=password]:focus{
   border:none;
   font-size: 1.5em;
 }

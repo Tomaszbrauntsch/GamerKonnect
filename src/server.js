@@ -31,6 +31,10 @@ TODO:
 Work on building a cookie that tells you the status of the loading, of how the
 backend is going. If it is process, good or failed
 */
+app.post('/', (req, res) => {
+  res.sendFile(__dirname + '/templates/index.html');
+});
+
 var email = '';
 var password = '';
 app.post('/registration', (req, res) => {
