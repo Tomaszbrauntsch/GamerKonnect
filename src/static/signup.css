@@ -1,5 +1,9 @@
 html,body{
   margin:0%;
+  min-height:100%;
+  background: linear-gradient(#4fcdff, #252E3C) no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 #titleText{
   font-family: 'Lato', sans-serif;
@@ -13,10 +17,10 @@ html,body{
 input[name=steamid] {
   width: 26%;
   box-sizing: border-box;
-  border: 2px solid #00FF00;
+  border: 2px solid #FFFFFF;
   border-radius: 0.3em;
   font-size: 2em;
-  background-color:rgba(0,0,0,0.6);
+  background-color:rgba(0,0,0,0.2);
   color:#FFFFFF;
   font-family: 'Lato', sans-serif;
   text-align: center;
@@ -30,10 +34,10 @@ textarea[name=aboutMe] {
   width: 45%;
   height: 1.5em;
   box-sizing: border-box;
-  border: 2px solid #00FF00;
+  border: 2px solid #FFFFFF;
   border-radius: 0.3em;
   font-size: 1.8em;
-  background-color:rgba(0,0,0,0.6);
+  background-color:rgba(0,0,0,0.2);
   color:#FFFFFF;
   font-family: 'Lato', sans-serif;
   text-align:center;
@@ -65,8 +69,8 @@ textarea[name=aboutMe]:hover{
 input[type=submit] {
   width:30%;
   height:40%;
-  background-color:rgba(0,0,0,0.6);
-  border: 3px solid #0F0;
+  background-color:rgba(0,0,0,0.2);
+  border: 3px solid #FFFFFF;
   border-radius: 8px;
   color: #FFFFFF;
   font-family: 'Lato', sans-serif;
@@ -82,8 +86,8 @@ a#btHome{
   font-size:1.8em;
   color:white;
   border-radius:8px;
-  background-color:rgba(0,0,0,0.6);
+  background-color:rgba(0,0,0,0.2);
   text-decoration: none;
   font-family: 'Lato', sans-serif;
-  border: 3px #0F0 solid;
+  border: 3px #FFFFFF solid;
 }
